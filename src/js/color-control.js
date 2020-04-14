@@ -10,7 +10,7 @@ let timerId = null;
 
 const setColor = () => {
   timerId = setInterval(() => {
-    const colorNumber = randomIntegerFromInterval(0, 5);
+    const colorNumber = randomIntegerFromInterval(0, colors.length - 1);
     bodyBtn.setAttribute('style', `background-color: ${colors[colorNumber]};`);
   }, 1000);
   startBtn.setAttribute('disabled', 'true');
